@@ -1,0 +1,38 @@
+{% extends 'pages/aindex.html' %}
+{% load static %}
+{% block content %}
+
+
+<div class="">
+    <div class="container">
+        <h5 class="text-center fs-1">Products</h5>
+<div class="headertable">
+<h1>Product Data</h1>
+    </div>
+    <a href="{% url 'product_add' %}" class="btn btn-primary " tabindex="-1" role="button" >Add Product</a>
+    <div class="tablecontent">
+    <table class="content-table">
+    <tr>
+    <th>Image</th>
+    <th>Product Name</th>
+    <th>Description</th>
+    <th>Price</th>
+    <th>Action</th>
+    </tr>
+    <tr>
+    {% for prod in products %}
+    <td> <img src="{{ prod.image.url }}"> </td>
+    <td> {{ prod.product_name }}  </td>
+    <td> {{ prod.description }}  </td>
+    <td> {{ prod.price }}  </td>
+    <td>
+        <a class="btn btn-success" href="{% url 'update_product' prod.id %}">Update</a>
+        <a class="btn btn-danger" href="/delete_prod/{{prod.id}}">Delete</a>
+    </td>
+    </tr>
+    {% endfor %}
+    </table>
+</div>
+
+</div>
+{% endblock %}

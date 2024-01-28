@@ -1,0 +1,39 @@
+{% extends 'pages/aindex.html' %}
+{% load static %}
+{% block content %}
+
+
+<div class="">
+    <div class="container">
+        <h5 class="text-center fs-1">Table</h5>
+<div class="headertable">
+<h1>Table Data</h1>
+    </div>
+    <a href="{% url 'T_add'%}" class="btn btn-primary " tabindex="-1" role="button" >Add Table</a>
+
+    <div class="tablecontent">
+    <table class="content-table">
+    <tr>
+    <th>ID</th>
+    <th>Number</th>
+    <th>Name</th>
+    <th>Available Seat</th>
+    <th>Action</th>
+    </tr>
+    <tr>
+    {% for tb in tables %}
+    <td> {{ tb.id }}  </td>
+    <td> {{ tb.table_number }}  </td>
+    <td> {{ tb.table_name }}  </td>
+    <td> {{ tb.avail_seat }}  </td>
+    <td>
+        <a class="btn btn-success" href="{% url 'update_table' tb.id %}">Update</a>
+        <a class="btn btn-danger" href="/delete/{{tb.id}}">Delete</a>
+    </td>
+    </tr>
+    {% endfor %}
+    </table>
+</div>
+
+</div>
+{% endblock %}

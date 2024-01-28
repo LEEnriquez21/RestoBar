@@ -1,0 +1,116 @@
+body {
+    margin: 0;
+    font-family: 'Arial', sans-serif;
+}
+.content {
+    margin-left: 200px;
+    padding: 20px;
+}
+.navbarcontent {
+    height: 100vh;
+    width: 200px;
+    background-color: #333;
+    position: fixed;
+    left: 0;
+    top: 0;
+    overflow-x: hidden;
+    padding-top: 20px;
+}
+
+.navbarcontent a {
+    padding: 15px;
+    text-decoration: none;
+    font-size: 18px;
+    color: white;
+    display: block;
+    transition: 0.3s;
+}
+
+.navbarcontent a:hover {
+    background-color: #555;
+}
+.con{
+    align-items: center;
+    text-align: center;
+    background-color: black;
+    font-weight: bold;
+    font-size: 20px;
+}
+.con h1{
+    color: black;
+    font-weight: bold;
+    font-size: 20px;
+}
+.tablecontent{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+    margin-left: auto;
+    margin-right: auto;
+}
+.headertable{
+    display: flex;
+    justify-content: center;
+    background-color: black;
+    width: 50%;
+    height: 50px;
+    border-radius: 20px;
+    align-items: center;
+    margin-left: auto;
+    margin-right: auto;
+}
+.headertable h1{
+    color: white;
+    font-weight: bold;
+}
+.content-table {
+    margin-left: 10%;
+    margin-right: 10%;
+    width: 80%;
+    border-collapse: collapse;
+    margin: 25px 0;
+    font-size: 0.9em;
+    min-width: 400px;
+    border-radius: 5px 5px 0 0;
+    overflow: hidden;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+}
+
+.content-table thead tr {
+    background-color: #009879;
+    color: #ffffff;
+    text-align: left;
+    font-weight: bold;
+}
+
+.content-table th,
+.content-table td {
+    text-align: center;
+    padding: 12px 15px;
+}
+
+.content-table tbody tr {
+    border-bottom: 1px solid #dddddd;
+}
+
+.content-table tbody tr:nth-of-type(even) {
+    background-color: #f3f3f3;
+}
+
+.content-table tbody tr:last-of-type {
+    border-bottom: 2px solid #020504;
+}
+
+.content-table tbody tr.active-row {
+    font-weight: bold;
+    color: #009879;
+}
+.content-table  img{
+    align-items: center;
+    justify-content: center;
+    width: 100px;
+    height: auto;
+}
+
+

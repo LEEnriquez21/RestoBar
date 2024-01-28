@@ -1,0 +1,35 @@
+{% extends 'pages/index.html' %}
+{% load static %}
+
+{% block content %}
+
+<div class="jumbotron jumbotron-fluid text-center" style="background-color: rgba(0, 0, 0, 0.7); color: white;">
+    <div class="container">
+      <h1 class="display-4">Welcome to RestoBar</h1>
+      <p class="lead">Discover a culinary journey of flavors and cocktails.</p>
+    </div>
+  </div>
+
+
+  <!-- Menu Section -->
+
+  <div class="container">
+    <h2 class="text-center text-black my-10 fs-1 fw-bold">Our Menu</h2>
+    <div class="row">
+      {% for prod in products %}
+      <div class="col-lg-4 mb-4">
+        <div class="card">
+          <img src="{{ prod.image.url }}" class="card-img-top" alt="Dish 2">
+          <div class="card-body">
+            <h5 class="card-title">{{ prod.product_name }}</h5>
+            <p class="card-text">{{ prod.description }}</p>
+            <p class="card-text">PHP: {{ prod.price }}</p>
+          </div>
+        </div>
+      </div>
+      {% endfor %}
+    </div>
+  </div>
+
+  
+ {% endblock %}

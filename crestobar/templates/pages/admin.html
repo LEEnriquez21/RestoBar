@@ -1,0 +1,53 @@
+{% extends 'pages/aindex.html' %}
+{% load static %}
+{% block content %}
+
+
+<div class="">
+    <div class="container">
+        <h5 class="text-center fs-1">Reservation</h5>
+    <div class="card-group">
+        <div class="card">
+          <div class="card-body">
+            <h5 class="card-title text-center fs-1">Pending:</h5>
+            <p class="card-text text-center fs-1">{{pending}}</p>
+          </div>
+        </div>
+        <div class="card">
+          <div class="card-body">
+            <h5 class="card-title text-center fs-1">Accepted:</h5>
+            <p class="card-text text-center fs-1">{{accepted}}</p>
+          </div>
+        </div>
+        <div class="card">
+          <div class="card-body">
+            <h5 class="card-title text-center fs-1">Denied:</h5>
+            <p class="card-text text-center fs-1">{{denied}}</p>
+          </div>
+        </div>
+      </div>
+      </div>
+
+
+
+<div class="container">
+    <h5 class="text-center fs-1">Products & Tables</h5>
+<div class="card-group">
+    <div class="card">
+      <div class="card-body">
+        <h5 class="card-title text-center fs-1">Products:</h5>
+        <p class="card-text text-center fs-1">{{total_product}}</p>
+      </div>
+    </div>
+    <div class="card">
+      <div class="card-body">
+        <h5 class="card-title text-center fs-1">Tables:</h5>
+        <p class="card-text text-center fs-1">{{total_table}}</p>
+      </div>
+    </div>
+  </div>
+  </div>
+</div>
+
+
+{% endblock %}

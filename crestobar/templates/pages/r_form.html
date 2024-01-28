@@ -1,0 +1,49 @@
+{% extends 'pages/aindex.html' %}
+{% load static %}
+{% block content %}
+
+
+<div class="">
+    <div class="container">
+        <h5 class="text-center fs-1">Reservations</h5>
+<div class="headertable">
+<h1>Reservation Data</h1>
+    </div>
+    <div class="tablecontent">
+    <table class="content-table">
+    <tr>
+    <th>Full Name</th>
+    <th>Ordered Food</th>
+    <th>Attendees</th>
+    <th>Phone</th>
+    <th>Email</th>
+    <th>Table</th>
+    <th>Reservation Expected</th>
+    <th>Description</th>
+    <th>Status</th>
+    <th>Action</th>
+
+    </tr>
+
+    <tr>
+    {% for res in reservations %}
+    <td> {{ res.full_name }}  </td>
+    <td> {{ res.product_name }}  </td>
+    <td> {{ res.attendees }}  </td>
+    <td> {{ res.phone }}  </td>
+    <td> {{ res.email }}  </td>
+    <td> {{ res.table }}  </td>
+    <td> {{ res.reservation_expected }} </td>
+    <td> {{ res.description }}  </td>
+    <td> {{ res.status }}  </td> 
+    <td>
+        <a class="btn btn-success" href="{% url 'update_reservation' res.id %}">Update</a>
+        <a class="btn btn-danger" href="/delete_reserve/{{res.id}}">Delete</a>
+    </td>
+    </tr>
+    {% endfor %}
+    </table>
+</div>
+
+</div>
+{% endblock %}
